@@ -6,6 +6,7 @@ projects:
     source:
       type: git
       location: 'https://github.com/juanantoniodelafuente/spring-petclinic.git'
+      starterProjectOnly: true
       branch: main
 components:
   - id: redhat/java11/latest
