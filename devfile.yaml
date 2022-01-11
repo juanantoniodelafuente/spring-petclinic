@@ -5,7 +5,7 @@ projects:
   - name: spring-petclinic
     source:
       type: git
-      location: 'https://github.com/redhat-developer-demos/spring-petclinic.git'
+      location: 'https://github.com/juanantoniodelafuente/spring-petclinic.git'
       branch: main
 components:
   - id: redhat/java11/latest
@@ -61,8 +61,8 @@ commands:
   - name: 1. Build
     actions:
       - workdir: '${CHE_PROJECTS_ROOT}/spring-petclinic'
-        type: exec
-        command: 'MAVEN_OPTS="-Xmx200m" && mvn -Duser.home=${HOME} -DskipTests clean install'
+        group: exec
+        commandLine: 'MAVEN_OPTS="-Xmx200m" && mvn -Duser.home=${HOME} -DskipTests clean install'
         component: maven
   - name: 2. Run
     actions:
